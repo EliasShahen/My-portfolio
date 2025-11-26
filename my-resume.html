@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elias Shahen - My Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased">
+
+    <!-- Fixed Top Navigation with Dropdown -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-lg py-4 px-8 flex justify-between items-center">
+        <h1 class="text-3xl font-bold text-indigo-600">Elias Shahen</h1>
+        <nav class="flex space-x-4 items-center">
+            <a href="my-portfolio.html" class="text-slate-600 hover:text-indigo-600 font-medium text-lg">Home</a>
+            <div class="relative">
+                <button id="dropdown-button" class="text-slate-600 hover:text-indigo-600 font-medium text-lg focus:outline-none flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 transform transition-transform duration-300">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                </button>
+                <div id="dropdown-menu" class="absolute top-full right-0 mt-2 w-max bg-white rounded-lg shadow-xl py-2 hidden">
+                    <a href="#education" class="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-indigo-600">Education</a>
+                    <a href="#certifications" class="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-indigo-600">Certifications</a>
+                    <a href="#technical-skills" class="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-indigo-600">Technical Skills</a>
+                    <a href="#soft-skills" class="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-indigo-600">Soft Skills</a>
+                    <a href="#languages" class="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-indigo-600">Languages</a>
+                    <a href="#professional-experience-anchor" class="block px-4 py-2 text-slate-600 hover:bg-slate-100 hover:text-indigo-600">Professional Experience</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Resume Content Section -->
+    <main class="p-8 md:p-12">
+        <!-- Education Section -->
+        <section id="education" class="min-h-screen flex items-center justify-center pt-[5rem]">
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 w-full max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Education</h3>
+                <div class="space-y-4 text-slate-600">
+                    <div>
+                        <p class="font-semibold">Bachelor of Science - Computer Science</p>
+                        <p>University of The People, USA | 2023-2026</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Associate's Degree - Computer Science</p>
+                        <p>University of The People, USA | 2023-2025</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Bachelor of Engineering - Informatics Engineering</p>
+                        <p>Al-Baath University, Syria | 2010-2015</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Comparative Evaluation Quebec</p>
+                        <p>2017</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications/Licenses -->
+        <section id="certifications" class="min-h-screen flex items-center justify-center">
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 w-full max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Certifications</h3>
+                <div class="space-y-4 text-slate-600">
+                     <div>
+                        <p class="font-semibold">Microsoft Certified: AZ-400 DevOps Engineer</p>
+                        <p>Microsoft</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section id="technical-skills" class="min-h-screen flex items-center justify-center">
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 w-full max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Technical Skills</h3>
+                <ul class="list-disc list-inside space-y-2 text-slate-600">
+                    <li>Core Development: Python, JavaScript, C#, HTML, CSS, .NET.</li>
+                    <li>Databases: SQL, MySQL, Microsoft SQL Server.</li>
+                    <li>Platforms: Microsoft Visual Studio Code, Git, GitHub, Microsoft Azure DevOps.</li>
+                    <li>Concepts: Data Structures, Algorithms, Agile Methodologies, DevOps (AZ-400), Git.</li>
+                    <li>Systems: Windows Server, macOS, Linux, Hardware/Software Troubleshooting, Network Configuration.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Soft Skills -->
+        <section id="soft-skills" class="min-h-screen flex items-center justify-center">
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 w-full max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Soft Skills</h3>
+                <ul class="list-disc list-inside space-y-2 text-slate-600">
+                    <li>Problem-Solving: Strong Troubleshooting and Problem Identification abilities.</li>
+                    <li>Adaptability & Learning: Adaptable and Fast-learning in a dynamic environment.</li>
+                    <li>Communication: Excellent Communication and Interpersonal Skills.</li>
+                    <li>Teamwork: Team-Oriented with proven Customer Service Experience.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Languages -->
+        <section id="languages" class="min-h-screen flex items-center justify-center">
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 w-full max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Languages</h3>
+                <ul class="list-disc list-inside space-y-2 text-slate-600">
+                    <li>English</li>
+                    <li>French</li>
+                    <li>Arabic</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Professional Experience Anchor -->
+        <span id="professional-experience-anchor"></span>
+        
+        <!-- Plumber Section -->
+        <section id="plumber-oram" class="min-h-screen flex items-center justify-center">
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 w-full max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Professional Experience</h3>
+                <h4 class="text-xl font-semibold text-slate-900">Plumber</h4>
+                <p class="text-lg font-medium text-slate-700">ORAM | 2022 - Present</p>
+                <ul class="list-disc list-inside mt-2 space-y-1 text-slate-600">
+                    <li>Using all the required tools for the job.</li>
+                    <li>Copper soldering, steel welding, steel threading and PVC.</li>
+                </ul>
+            </div>
+        </section>
+        <!-- Security Guard Section -->
+        <section id="security-pharmaprix" class="min-h-screen flex items-center justify-center">
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 w-full max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Professional Experience</h3>
+                <h4 class="text-xl font-semibold text-slate-900">Security Guard</h4>
+                <p class="text-lg font-medium text-slate-700">G4S | 2018 - 2021</p>
+                <ul class="list-disc list-inside mt-2 space-y-1 text-slate-600">
+                    <li>Ensure the safety and security of the place.</li>
+                    <li>Ensure that all contractors have valid temporary passes to work in assigned areas.</li>
+                    <li>Check the employee and write down their time in/out.</li>
+                    <li>Respond and react to any emergencies that may occur at the workplace and client.</li>
+                    <li>Inspect the validity of the incoming and outgoing trailers.</li>
+                    <li>Inspect the incoming and outgoing bill numbers.</li>
+                    <li>Maintain complete, accurate, and up-to-date patrol notes, incident reports, and information management system entries as required.</li>
+                </ul>
+            </div>
+        </section>
+         <!-- Phoenicia Products Inc Section -->
+        <section id="warehouse-assistant" class="min-h-screen flex items-center justify-center">
+            <div class="bg-white p-8 rounded-lg shadow-md mb-8 w-full max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold mb-4 text-indigo-600">Professional Experience</h3>
+                <h4 class="text-xl font-semibold text-slate-900">Warehouse Assistant</h4>
+                <p class="text-lg font-medium text-slate-700">Phoenicia Products Inc | 2016 - 2018</p>
+                <ul class="list-disc list-inside mt-2 space-y-1 text-slate-600">
+                    <li>Responsible for receiving merchandise.</li>
+                    <li>Prepared orders for shipment.</li>
+                </ul>
+            </div>
+        </section>
+    
+    <footer class="text-center py-8 text-sm text-slate-500">
+        <p>&copy; 2025 Elias Shahen®</p>
+        <p>All rights reserved.</p>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let isScrolling = false;
+
+        const dropdownButton = document.getElementById('dropdown-button');
+        const dropdownMenu = document.getElementById('dropdown-menu');
+        const dropdownArrow = dropdownButton.querySelector('svg');
+
+        dropdownButton.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('hidden');
+            dropdownArrow.classList.toggle('rotate-180');
+        });
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', (e) => {
+            if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+                dropdownArrow.classList.remove('rotate-180');
+            }
+        });
+
+        // Function to find the nearest section based on vertical position
+        const getNearestSection = () => {
+            const sections = document.querySelectorAll('section');
+            let nearestSection = null;
+            let minDistance = Infinity;
+
+            sections.forEach(sec => {
+                const rect = sec.getBoundingClientRect();
+                const distance = Math.abs(rect.top);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    nearestSection = sec;
+                }
+            });
+            return nearestSection;
+        };
+        
+        // Full-page scroll logic
+        window.addEventListener('wheel', (e) => {
+            if (isScrolling) {
+                return;
+            }
+
+            isScrolling = true;
+            
+            const sections = document.querySelectorAll('section');
+            const currentSection = getNearestSection();
+            const currentIndex = Array.from(sections).findIndex(sec => sec === currentSection);
+            let nextIndex = currentIndex;
+
+            if (e.deltaY > 0) { // Scrolling down
+                nextIndex = Math.min(sections.length - 1, currentIndex + 1);
+            } else { // Scrolling up
+                nextIndex = Math.max(0, currentIndex - 1);
+            }
+            
+            if (nextIndex !== currentIndex) {
+                sections[nextIndex].scrollIntoView({ behavior: 'smooth' });
+            }
+            
+            setTimeout(() => {
+                isScrolling = false;
+            }, 300); // Prevents rapid scrolling
+        });
+        
+        // Handle navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close dropdown after clicking a link
+                    dropdownMenu.classList.add('hidden');
+                    dropdownArrow.classList.remove('rotate-180');
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

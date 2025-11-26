@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elias Shahen - Interactive Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg {
+            /* This gradient is a close match to the provided image */
+            background: linear-gradient(to bottom right, #4f46e5, #8b5cf6);
+        }
+        pre { background-color: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; font-size: 0.875rem; }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased">
+
+    <!-- Fixed Top Navigation -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white shadow-lg py-4 px-8 flex justify-between items-center">
+        <h1 class="text-3xl font-bold text-indigo-600">Elias Shahen</h1>
+        <nav class="flex space-x-6">
+            <a href="#home" class="nav-link text-slate-600 hover:text-indigo-600 font-medium text-lg">Home</a>
+            <a href="#about" class="nav-link text-slate-600 hover:text-indigo-600 font-medium text-lg">About</a>
+            <a href="#skills" class="nav-link text-slate-600 hover:text-indigo-600 font-medium text-lg">Skills</a>
+            <a href="#projects" class="nav-link text-slate-600 hover:text-indigo-600 font-medium text-lg">Projects</a>
+            <a href="my-resume.html" target="_blank" class="text-slate-600 hover:text-indigo-600 font-medium text-lg">My Resume</a>
+            <a href="#contact" class="nav-link text-slate-600 hover:text-indigo-600 font-medium text-lg">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content Area with padding for the fixed header -->
+    <main class="mt-[5rem]">
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center p-8 hero-bg text-white">
+            <div>
+                <h2 class="text-6xl font-bold mb-4">Hello, I'm Elias.</h2>
+                <p class="text-2xl mb-8 max-w-2xl mx-auto">A versatile and skilled developer passionate about building intuitive and powerful applications.</p>
+                <a href="#contact" class="nav-link bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-indigo-100 transform hover:scale-105 transition-transform">Get in Touch</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="min-h-screen flex items-center p-8 md:p-12 bg-slate-100">
+             <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-6 text-slate-900">About Me</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md space-y-4 text-lg text-slate-600">
+                    <p>Highly motivated Computer Science student seeking a professional role to launch a career in the IT sector.</p>
+                    <p>Brings a proven commitment to rapid learning, problem-solving, and attention to detail, ready to apply academic knowledge and a strong work ethic to a challenging professional environment.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="min-h-screen flex items-center p-8 md:p-12 bg-slate-100">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-2 text-slate-900">Technical Skills</h2>
+                <p class="text-lg text-slate-600 mb-8">Click on a skill to see a code snippet and more details.</p>
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="lg:w-1/3">
+                        <div id="skills-grid" class="grid grid-cols-2 gap-4">
+                            <!-- Skills will be dynamically injected here -->
+                        </div>
+                    </div>
+                    <div class="lg:w-2/3">
+                        <div id="skill-details" class="bg-white p-6 rounded-lg shadow-md min-h-[20rem]">
+                            <h3 id="skill-title" class="text-2xl font-bold mb-2 text-indigo-600">Select a Skill</h3>
+                            <p id="skill-description" class="text-slate-600 mb-4">Details will be shown here.</p>
+                            <div id="skill-code-wrapper">
+                                <pre><code id="skill-code" class="language-js"></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="min-h-screen flex items-center p-8 md:p-12 bg-slate-100">
+             <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold mb-2 text-slate-900">My Projects</h2>
+                <p class="text-lg text-slate-600 mb-6">A selection of my work. Use the filters to navigate.</p>
+                <div id="project-filters" class="flex flex-wrap gap-2 mb-8">
+                    <!-- Filter buttons will be dynamically injected here -->
+                </div>
+                <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projects will be dynamically injected here -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contact" class="min-h-screen flex items-center p-8 md:p-12 bg-slate-100">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold mb-6 text-slate-900">Get in Touch</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <p class="text-xl text-slate-600 mb-8 text-center">Ready to collaborate or have a question? Reach out to discuss opportunities!</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg">
+                         <div class="flex items-center gap-4">
+                            <span class="text-indigo-500">🔗</span>
+                            <a href="https://www.linkedin.com/in/eliasshahen/" target="_blank" rel="noopener noreferrer" class="text-slate-700 hover:text-indigo-600">LinkedIn Profile</a>
+                        </div>
+                         <div class="flex items-center gap-4">
+                            <span class="text-indigo-500">💻</span>
+                            <a href="https://github.com/EliasShahen" target="_blank" rel="noopener noreferrer" class="text-slate-700 hover:text-indigo-600">GitHub Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="text-center py-8 text-sm text-slate-500">
+            <p>&copy; 2025 Elias Shahen®</p>
+        </footer>
+    </main>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+        let isScrolling = false;
+
+        const skillsData = [
+            { id: 'html-css', name: 'HTML & CSS', desc: 'Building clean, responsive layouts with modern styling frameworks like Tailwind CSS.', code: '<div class="bg-indigo-500 text-white p-4">\n  Styled with Tailwind CSS\n</div>', lang: 'html' },
+            { id: 'js', name: 'JavaScript', desc: 'Creating interactive front-end components and understanding core JS concepts.', code: "fetch('api/data')\n  .then(res => res.json())\n  .then(data => console.log(data));", lang: 'javascript' },
+            { id: 'python', name: 'Python', desc: 'Developing scripting solutions and foundational knowledge in web frameworks.', code: '# Flask API example\nfrom flask import Flask, jsonify\napp = Flask(__name__)\n\n@app.route(\'/api/data\')\ndef get_data():\n    return jsonify({\'message\': \'Hello!\'})', lang: 'python' },
+            { id: 'csharp', name: 'C#', desc: 'Writing clean, object-oriented code for backend applications and logic.', code: '// Simple C# algorithm\npublic int Factorial(int n) {\n  if (n == 0) return 1;\n  return n * Factorial(n - 1);\n}', lang: 'csharp' },
+            { id: 'django', name: 'Django', desc: 'Beginning to build robust web applications with this powerful Python framework.', code: '# Basic Django view\nfrom django.http import HttpResponse\n\ndef home_page_view(request):\n    return HttpResponse("Hello, World!")', lang: 'python' },
+            { id: 'git', name: 'Git', desc: 'Proficient in version control for collaborative development and project tracking.', code: '# Common Git commands\ngit add .\ngit commit -m "feat: initial commit"\ngit push origin main', lang: 'bash' },
+            { id: 'sql', name: 'SQL', desc: 'Writing queries to retrieve, manipulate, and manage relational database data.', code: '-- Basic SQL query\nSELECT name, email FROM users WHERE id = 1;', lang: 'sql' },
+        ];
+        
+        const projectsData = [
+            { title: 'Responsive Web App', desc: 'A responsive web app built with HTML, CSS, and JavaScript, featuring dynamic content loading.', link: '#', tags: ['Web App', 'Front-End'] },
+            { title: 'Python REST API', desc: 'A Flask-based API for processing user data, integrated with a front-end application.', link: '#', tags: ['API', 'Back-End'] },
+            { title: 'C# Backend Service', desc: 'A C# service for handling business logic and complex database operations efficiently.', link: '#', tags: ['Back-End'] },
+            { title: 'Data Analysis Scripts', desc: 'Python scripts for cleaning, processing, and visualizing datasets to derive insights.', link: '#', tags: ['Data'] },
+            { title: 'Portfolio Website', desc: 'This interactive SPA, built to showcase my skills in modern web development practices.', link: '#', tags: ['Web App', 'Front-End'] }
+        ];
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                // Only prevent default for internal links
+                if (targetSection) {
+                    e.preventDefault();
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        const skillsGrid = document.getElementById('skills-grid');
+        const skillTitle = document.getElementById('skill-title');
+        const skillDescription = document.getElementById('skill-description');
+        const skillCode = document.getElementById('skill-code');
+
+        function displaySkill(skillId) {
+            const skill = skillsData.find(s => s.id === skillId);
+            if (skill) {
+                skillTitle.textContent = skill.name;
+                skillDescription.textContent = skill.desc;
+                skillCode.textContent = skill.code;
+                skillCode.className = `language-${skill.lang}`;
+
+                document.querySelectorAll('.skill-card').forEach(card => {
+                    card.classList.remove('selected');
+                });
+                document.querySelector(`.skill-card[data-id="${skillId}"]`).classList.add('selected');
+            }
+        }
+        
+        skillsData.forEach(skill => {
+            const card = document.createElement('div');
+            card.className = 'skill-card bg-white p-4 rounded-lg shadow-md cursor-pointer hover:shadow-xl hover:scale-105';
+            card.textContent = skill.name;
+            card.setAttribute('data-id', skill.id);
+            card.addEventListener('click', () => displaySkill(skill.id));
+            skillsGrid.appendChild(card);
+        });
+
+        const projectsGrid = document.getElementById('projects-grid');
+        const projectFilters = document.getElementById('project-filters');
+        
+        const allTags = ['All', ...new Set(projectsData.flatMap(p => p.tags))];
+
+        allTags.forEach(tag => {
+            const button = document.createElement('button');
+            button.className = 'project-filter-btn px-4 py-2 rounded-full text-sm font-medium bg-white shadow-sm hover:bg-indigo-500 hover:text-white';
+            if (tag === 'All') {
+                button.classList.add('bg-indigo-600', 'text-white');
+            }
+            button.textContent = tag;
+            button.setAttribute('data-tag', tag);
+            button.addEventListener('click', () => filterProjects(tag));
+            projectFilters.appendChild(button);
+        });
+
+        function displayProjects(filterTag = 'All') {
+            projectsGrid.innerHTML = '';
+            const filteredProjects = (filterTag === 'All') 
+                ? projectsData 
+                : projectsData.filter(p => p.tags.includes(filterTag));
+            
+            filteredProjects.forEach(project => {
+                const card = document.createElement('div');
+                card.className = 'bg-white p-6 rounded-lg shadow-md flex flex-col';
+                card.innerHTML = `
+                    <h3 class="text-xl font-bold mb-2">${project.title}</h3>
+                    <div class="flex-grow">
+                        <p class="text-slate-600 mb-4">${project.desc}</p>
+                    </div>
+                    <a href="${project.link}" class="text-indigo-600 hover:underline font-semibold mt-auto">View Project</a>
+                `;
+                projectsGrid.appendChild(card);
+            });
+        }
+        
+        function filterProjects(tag) {
+            document.querySelectorAll('.project-filter-btn').forEach(btn => {
+                btn.classList.remove('bg-indigo-600', 'text-white');
+                if (btn.getAttribute('data-tag') === tag) {
+                    btn.classList.add('bg-indigo-600', 'text-white');
+                }
+            });
+            displayProjects(tag);
+        }
+        
+        // Full-page scroll logic
+        window.addEventListener('wheel', (e) => {
+            if (isScrolling) {
+                return;
+            }
+
+            isScrolling = true;
+            
+            const sections = document.querySelectorAll('section');
+            let currentSection = null;
+            sections.forEach(sec => {
+                const rect = sec.getBoundingClientRect();
+                if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                    currentSection = sec;
+                }
+            });
+            
+            const currentIndex = Array.from(sections).findIndex(sec => sec === currentSection);
+            let nextIndex = currentIndex;
+
+            if (e.deltaY > 0) { // Scrolling down
+                nextIndex = Math.min(sections.length - 1, currentIndex + 1);
+            } else { // Scrolling up
+                nextIndex = Math.max(0, currentIndex - 1);
+            }
+            
+            if (nextIndex !== currentIndex) {
+                sections[nextIndex].scrollIntoView({ behavior: 'smooth' });
+            }
+            
+            setTimeout(() => {
+                isScrolling = false;
+            }, 300); // Prevents rapid scrolling
+        });
+
+
+        displaySkill('html-css');
+        displayProjects();
+    });
+    </script>
+</body>
+</html>
