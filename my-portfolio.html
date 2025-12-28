@@ -11,7 +11,6 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .hero-bg {
-            /* This gradient is a close match to the provided image */
             background: linear-gradient(to bottom right, #4f46e5, #8b5cf6);
         }
         pre { background-color: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; font-size: 0.875rem; }
@@ -62,7 +61,6 @@
                 <div class="flex flex-col lg:flex-row gap-8">
                     <div class="lg:w-1/3">
                         <div id="skills-grid" class="grid grid-cols-2 gap-4">
-                            <!-- Skills will be dynamically injected here -->
                         </div>
                     </div>
                     <div class="lg:w-2/3">
@@ -84,10 +82,8 @@
                 <h2 class="text-4xl font-bold mb-2 text-slate-900">My Projects</h2>
                 <p class="text-lg text-slate-600 mb-6">A selection of my work. Use the filters to navigate.</p>
                 <div id="project-filters" class="flex flex-wrap gap-2 mb-8">
-                    <!-- Filter buttons will be dynamically injected here -->
                 </div>
                 <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Projects will be dynamically injected here -->
                 </div>
             </div>
         </section>
@@ -145,7 +141,6 @@
             link.addEventListener('click', (e) => {
                 const targetId = link.getAttribute('href').substring(1);
                 const targetSection = document.getElementById(targetId);
-                // Only prevent default for internal links
                 if (targetSection) {
                     e.preventDefault();
                     targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -229,7 +224,7 @@
             displayProjects(tag);
         }
         
-        // Full-page scroll logic
+        // Scroll logic
         window.addEventListener('wheel', (e) => {
             if (isScrolling) {
                 return;
